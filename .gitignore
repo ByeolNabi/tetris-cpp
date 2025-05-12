@@ -69,7 +69,6 @@ Temporary Items
 *.icloud
 
 ### VisualStudioCode ###
-.vscode
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -87,5 +86,30 @@ Temporary Items
 # Ignore all local history of files
 .history
 .ionide
+
+# Created by https://www.toptal.com/developers/gitignore/api/cmake
+# Edit at https://www.toptal.com/developers/gitignore?templates=cmake
+
+### CMake ###
+build
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
+
+### CMake Patch ###
+CMakeUserPresets.json
+
+# External projects
+*-prefix/
+
+# End of https://www.toptal.com/developers/gitignore/api/cmake
 
 # End of https://www.toptal.com/developers/gitignore/api/c++,visualstudiocode,macos

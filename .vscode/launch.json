@@ -1,0 +1,27 @@
+// .vscode/launch.json (macOS용)
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "CMake Debug (macOS)", // macOS 환경임을 알 수 있도록 이름 변경
+            "type": "cppdbg",
+            "request": "launch",
+            // 프로그램 경로는 CMake Tools가 빌드한 실행 파일 경로를 자동으로 찾습니다.
+            "program": "${command:cmake.launchTargetPath}",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true, // 콘솔 창을 별도로 띄워서 실행 결과를 봅니다.
+            // ⭐⭐ 이 두 부분이 macOS에 맞게 수정됩니다! ⭐⭐
+            "MIMode": "lldb",         // macOS에서는 보통 lldb 디버거 사용 ✅
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for lldb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+        }
+    ]
+}
